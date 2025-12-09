@@ -183,6 +183,11 @@ main.gallery {
 .personal h2 {
     color: #4d4bb4;
     margin-bottom: 15px;
+    margin-left: 50px;
+}
+
+.personal p {
+    margin-left: 50px;
 }
 
 /* Contenedor para columnas de animales (perros/gatos) */
@@ -237,6 +242,7 @@ main.gallery {
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: left;
+    margin-left: 50px;
 }
 
 /* FILA DE MINI GALERÍA: imágenes más pequeñas tipo thumbnails */
@@ -267,12 +273,12 @@ main.gallery {
 }
 
 /* (Duplicado) personal h3: esta regla aparece de nuevo más abajo con color ligeramente distinto */
-/* Nota: Es redundante tener dos .personal h3 con valores distintos; conviene unificarlos. */
 .personal h3 {
     color: #4240b1; /* Color alternativo — elegir uno y eliminar el otro */
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: left;
+    margin-left: 130px;
 }
 
 /* (Duplicación completa de .gallery-row y .gallery-row img) */
@@ -283,6 +289,8 @@ main.gallery {
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 20px;
+    margin-left: 130px;
+    margin-right: 130px;
 }
 
 .gallery-row img {
