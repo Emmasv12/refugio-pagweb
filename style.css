@@ -288,3 +288,123 @@ main.gallery {
     transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
+.tienda-main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.tienda-productos {
+    position: relative;
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.tienda-productos h2 {
+    color: #4d4bb4;
+    margin-bottom: 20px;
+}
+
+.tienda-video {
+    text-align: center;
+    margin-bottom: 20px; /* Add margin below the video */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.tienda-video h3 {
+    color: #4d4bb4;
+    margin-bottom: 10px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.producto {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.producto img {
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.producto p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.precio {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #27ae60;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.btn-comprar {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #2980b9;
+}
+
+.tienda-sidebar {
+    padding: 20px;
+}
+
+.btn-ver-carrito {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-ver-carrito:hover {
+    background-color: #e67e22;
+}
+
+@media (max-width: 768px) {
+    .tienda-main {
+        grid-template-columns: 1fr;
+    }
+
+    .tienda-sidebar {
+        padding: 10px;
+    }
+}
