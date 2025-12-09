@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANVA - Contacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="banner"></div>
+                <div class="logo"></div>
+                <div class="brand-text">
+                    <strong>SANVA - Refugio de Patitas y Colitas 𓃠</strong>
+                    <span>♡ Adopta — No Abandones ♡</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="contenido.html">Nuestros animales</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="contacto-container">
+            <h2>Formulario de Contacto</h2>
+            <form action="#" method="POST">
+                <label>Nombre <span class="obligatorio">*</span></label>
+                <input type="text" name="nombre" required>
+                <label>Apellido <span class="obligatorio">*</span></label>
+                <input type="text" name="apellido" required>
+                <label>Fecha de nacimiento <span class="obligatorio">*</span></label>
+                <input type="date" name="fecha_nacimiento" required>
+                <label>Domicilio (opcional)</label>
+                <input type="text" name="domicilio">
+                <label>Correo electrónico para recibir el ticket <span class="obligatorio">*</span></label>
+                <input type="email" name="correo" required>
+                <label>Número de teléfono <span class="obligatorio">*</span></label>
+                <input type="tel" name="telefono" required>
+                <label>Número de cuenta bancaria (opcional)</label>
+                <input type="text" name="cuenta_banco">
+                <label>Comentarios adicionales (opcional)</label>
+                <textarea name="comentarios"></textarea>
+                <button type="submit" class="btn-enviar">Enviar formulario</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
+    </footer>
+</body>
+</html>

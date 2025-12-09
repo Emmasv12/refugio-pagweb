@@ -40,53 +40,54 @@
         <div class="productos-grid">
             <div class="producto">
                 <img src="piensogato.jpg" alt="Producto 1">
-                <h3>Comida para perros</h3>
+                <h3>Comida para gatos</h3>
                 <p>Alimento balanceado para gatos de todas las edades.</p>
                 <span class="precio">$25.00</span>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Comida para gatos" data-precio="25.00">Comprar</a>
             </div>
             <div class="producto">
                 <img src="piensoperro.jpg" alt="Producto 2">
-                <h3>Comida para gatos</h3>
+                <h3>Comida para perros</h3>
                 <p>Alimento balanceado para perros de todas las edades.</p>
                 <span class="precio">$20.00</span>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Comida para perros" data-precio="20.00">Comprar</a>
             </div>
             <div class="producto">
                 <img src="juguetegato.jpg" alt="Producto 3">
-                <h3>Juguete para perros</h3>
+                <h3>Juguete para gatos</h3>
                 <p>Pack de juguetes para que tu gato se divierta.</p>
                 <span class="precio">$10.00</span>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Juguete para gatos" data-precio="10.00">Comprar</a>
             </div>
             <div class="producto">
                 <img src="jugueteperro.jpg" alt="Producto 4">
-                <h3>Juguete para gatos</h3>
+                <h3>Juguete para perros</h3>
                 <p>pack de juguetes para que tu perro se divierta.</p>
                 <span class="precio">$8.00</span>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Jueguete para perros" data-precio="8.00">Comprar</a>
             </div>
             <div class="producto">
                 <img src="collar gato.jpg" alt="Producto 5">
-                <h3>Collar para perros</h3>
+                <h3>Collar para gatos</h3>
                 <p>Collar para que tu gato se vea bien.</p>
                 <span class="precio">$12.00</span>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Collar para gatos" data-precio="12.00">Comprar</a>
             </div>
             <div class="producto">
                 <img src="collarperro.jpg" alt="Producto 6">
-                <h3>Collar para gatos</h3>
+                <h3>Collar para perros</h3>
                 <p>Collar para que tu perro se vea bien.</p>
                 <span class="precio">$10.00</span>
-                <a href="#" class="btn-comprar">Comprar</a>
+                <a href="#" class="btn-comprar" data-nombre="Collar para perros" data-precio="10.00">Comprar</a>
             </div>
         </section>
 
         <aside class="tienda-sidebar">
             <div class="card">
                 <h3>Carrito de Compras</h3>
-                <p>Tu carrito está vacío.</p>
-                <a href="#" class="btn-ver-carrito">Ver Carrito</a>
+                <ul id="carrito-lista"></ul>
+                    <p id="carrito-vacio">Tu carrito está vacío.</p>
+                <a href="#" class="btn-ver-carrito">Pagar ahora</a>
             </div>
 
             <div class="horario">
@@ -103,5 +104,24 @@
     <footer>
         <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
     </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const botonesComprar = document.querySelectorAll(".btn-comprar");
+        const carritoLista = document.getElementById("carrito-lista");
+        const carritoVacio = document.getElementById("carrito-vacio");
+        botonesComprar.forEach(boton => {
+            boton.addEventListener("click", (e) => {
+                e.preventDefault();
+                const nombre = boton.dataset.nombre;
+                const precio = boton.dataset.precio;
+                const item = document.createElement("li");
+                item.textContent = `${nombre} - $${precio}`;
+                carritoLista.appendChild(item);
+                carritoVacio.style.display = "none";
+            });
+        });
+
+    });
+</script>
 </body>
 </html>
