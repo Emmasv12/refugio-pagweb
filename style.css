@@ -1,134 +1,151 @@
+/* Reset / box-model y fuente por defecto */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; /* Elimina márgenes por defecto de elementos para control total */
+    padding: 0; /* Elimina relleno por defecto para control total */
+    box-sizing: border-box; /* Incluye padding/border en el ancho total (más predecible) */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente base para toda la web */
 }
 
+/* Estilos base del body */
 body {
-    background-color: #f6faf4;
-    color: #2e2e2e;
+    background-color: #f6faf4; /* Fondo claro y suave, transmite limpieza y naturaleza */
+    color: #2e2e2e; /* Color de texto principal para contraste y legibilidad */
 }
 
+/* Enlaces por defecto */
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none; /* Quita subrayado por defecto */
+    color: inherit; /* Hereda color del contenedor (más consistente visualmente) */
 }
 
+/* Imágenes: evitar desbordes y dar bordes suaves */
 img {
-    max-width: 100%;
-    border-radius: 8px;
-    }
+    max-width: 100%; /* Imagen nunca excederá el ancho de su contenedor */
+    border-radius: 8px; /* Esquinas redondeadas uniformes */
+}
 
+/* Contenedor centrado con ancho máximo */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    width: 90%; /* Margen lateral para respirar en pantallas pequeñas */
+    max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
+    margin: auto; /* Centra horizontalmente */
 }
 
+/* HEADER: estilo de la cabecera principal */
 header {
-    background-color: #ffffff;
-    border-bottom: 2px solid #46ecad;
-    padding: 15px 0;
+    background-color: #ffffff; /* Fondo blanco para contrastar con el body */
+    border-bottom: 2px solid #46ecad; /* Línea inferior distintiva */
+    padding: 15px 0; /* Espaciado vertical */
 }
 
+/* Layout interno del header (logo a la izquierda, nav a la derecha) */
 .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Flexbox para alinear items horizontalmente */
+    justify-content: space-between; /* Espacio entre brand y nav */
+    align-items: center; /* Centrado vertical de elementos del header */
 }
 
+/* BRAND: contenedor del logo y texto */
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    display: flex; /* Alinea banner, logo y texto horizontalmente */
+    align-items: center; /* Centrado vertical */
+    gap: 15px; /* Separación uniforme entre elementos */
 }
 
+/* Logo: caja con background-image (definida en HTML como SANVA.png) */
 .logo {
-    width: 60px;
-    height: 60px;
-    background-image: url("SANVA.png");
-    background-size: cover;
-    border-radius: 50%;
-    border: 2px solid #5c8ab6;
-    }
+    width: 60px; /* Ancho fijo del avatar/logo */
+    height: 60px; /* Alto fijo para mantener proporción */
+    background-image: url("SANVA.png"); /* Imagen del logo */
+    background-size: cover; /* Ajusta la imagen para cubrir la caja */
+    border-radius: 50%; /* Hace el logo circular */
+    border: 2px solid #5c8ab6; /* Borde decorativo */
+}
 
+/* Texto pequeño debajo/nombre de la marca */
 .brand-text span {
-    font-size: 14px;
-    color: #6d6d6d;
+    font-size: 14px; /* Tamaño menos prominente para el subtítulo */
+    color: #6d6d6d; /* Color gris para texto secundario */
 }
 
+/* Navegación principal: lista horizontal */
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+    display: flex; /* Muestra los elementos en fila */
+    list-style: none; /* Quita los puntos de lista por defecto */
+    gap: 20px; /* Separación entre enlaces del nav */
 }
 
+/* Enlaces del nav: padding para click area y apariencia */
 nav a {
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
+    padding: 8px 12px; /* Espaciado interno para clic más cómodo */
+    border-radius: 5px; /* Borde suave en enlaces activos/hover */
+    font-weight: bold; /* Legibilidad y jerarquía */
+    transition: 0.3s; /* Transición suave para hover */
 }
 
+/* Estilos para enlace activo y hover (background + color) */
 nav a:hover, nav a.active {
-    background-color: #48b9bd;
-    color: white;
+    background-color: #48b9bd; /* Color de fondo al pasar por encima o activo */
+    color: white; /* Texto en blanco para contraste con el fondo */
 }
 
+/* Tarjeta tipo "link-card" (posible uso alternativo) */
 .link-card {
-    gap: 15px;
-    background-color: #246091;
-    padding: 12px;
-    border-radius: 10px;
-    border-left: 6px solid #509dc9;
-    margin-top: 15px;
-    transition: 0.3s;
+    gap: 15px; /* Separación interna */
+    background-color: #246091; /* Fondo principal */
+    padding: 12px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    border-left: 6px solid #509dc9; /* Banda lateral decorativa */
+    margin-top: 15px; /* Separación superior */
+    transition: 0.3s; /* Transición para hover */
 }
 
+/* animación y cambio de fondo al hover */
 .link-card:hover, .link-tienda:hover {
-    transform: translateX(5px);
-    background-color: #d8ead5;
+    transform: translateX(5px); /* Desplazamiento sutil para efecto "desplazar" */
+    background-color: #d8ead5; /* Cambio de fondo al pasar por encima */
 }
 
+/* Badge redondeada dentro de tarjetas */
 .link-badge {
-    background-color: #5d90ff;
-    width: 42px;
+    background-color: #5d90ff; /* Color llamativo para el badge */
+    width: 42px; /* Tamaño fijo */
     height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+    display: flex; /* Flex para centrar texto */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    border-radius: 50%; /* Circulo perfecto */
     color: white;
     font-weight: bold;
     font-size: 18px;
 }
 
+/* Card genérica para bloques laterales o CTA */
 .card {
-    background-color: white;
-    padding: 20px;
+    background-color: white; /* Fondo blanco para contraste */
+    padding: 20px; /* Espaciado interno */
     border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1); /* Sombra suave para elevación */
 }
 
-
+/* Botón/enlace de contacto en aside */
 .contacto {
-    display: inline-block;
+    display: inline-block; /* Comportamiento similar a botón */
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #3633d1;
-    color: white;
+    background-color: #3633d1; /* Color distintivo */
+    color: white; /* Texto blanco */
     border-radius: 8px;
     font-weight: bold;
     transition: 0.3s;
 }
 
-
+/* Hover para el botón contacto */
 .contacto:hover {
-    background-color: #246091;
+    background-color: #246091; /* Cambio de color para feedback */
 }
 
-
+/* Estilo de la caja de horario (similar a card) */
 .horario {
     background-color: #ffffff;
     padding: 20px;
@@ -138,72 +155,83 @@ nav a:hover, nav a.active {
     margin-top: 20px;
 }
 
+/* Color del título dentro de horario */
 .horario h4 {
     margin-bottom: 8px;
     color: #4d4bb4;
 }
 
+/* FOOTER: estilo global del pie de página */
 footer {
-background-color: #40a1b3;
-padding: 18px 0;
-margin-top: 40px;
-text-align: center;
-color: white;
-font-weight: bold;
+    background-color: #40a1b3; /* Fondo azul/verde distintivo */
+    padding: 18px 0; /* Espacio vertical */
+    margin-top: 40px; /* Separación respecto al contenido */
+    text-align: center; /* Centrado del texto del footer */
+    color: white;
+    font-weight: bold;
 }
 
+/* Estilos para la galería principal (no muy usado, puede ser redundante) */
 main.gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Grid adaptativo */
     gap: 15px;
     margin-top: 20px;
 }
 
+/* Título de sección "personal" */
 .personal h2 {
     color: #4d4bb4;
     margin-bottom: 15px;
 }
 
+/* Contenedor para columnas de animales (perros/gatos) */
 .animal-columns {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: flex; /* Uso de flex para columnas lado a lado */
+    gap: 20px; /* Espacio entre columnas */
+    flex-wrap: wrap; /* Se envuelven en pantallas pequeñas */
     margin-top: 20px;
 }
 
+/* Cada columna dentro de animal-columns */
 .animal-columns .column {
-    flex: 1;
-    min-width: 250px;
+    flex: 1; /* Ocupa espacio disponible */
+    min-width: 250px; /* Mínimo para evitar quedar demasiado pequeño */
 }
 
+/* Títulos de las columnas */
 .animal-columns h3 {
     color: #4d4bb4;
     margin-bottom: 15px;
     text-align: center;
 }
 
+/* Clase genérica .gallery para otro tipo de galerías */
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
 }
 
+/* Estilos para las imágenes grandes de la galería */
 .gallery img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    height: 180px; /* Altura fija para consistencia */
+    object-fit: cover; /* Recorta la imagen manteniendo proporción */
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra para elevación */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efecto al hover */
+    cursor: pointer; /* Indica que es interactiva (posible lightbox) */
 }
 
+/* Hover para imágenes de galería: escala y sombra */
 .gallery img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    z-index: 2;
+    z-index: 2; /* Para que se superponga al resto */
 }
 
+/* Títulos secundarios dentro de .personal */
 .personal h3 {
     color: #4d4bb4;
     margin-top: 20px;
@@ -211,16 +239,18 @@ main.gallery {
     text-align: left;
 }
 
+/* FILA DE MINI GALERÍA: imágenes más pequeñas tipo thumbnails */
 .gallery-row {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: wrap; /* Se envuelven en pantallas pequeñas */
+    justify-content: flex-start; /* Alineación inicial */
     margin-bottom: 20px;
 }
 
+/* Miniaturas en gallery-row */
 .gallery-row img {
-    width: 150px;
+    width: 150px; /* Tamaño fijo para miniaturas */
     height: 150px;
     object-fit: cover;
     border-radius: 12px;
@@ -229,19 +259,24 @@ main.gallery {
     cursor: pointer;
 }
 
+/* Hover para miniaturas: igual que en galería grande */
 .gallery-row img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     z-index: 2;
 }
 
+/* (Duplicado) personal h3: esta regla aparece de nuevo más abajo con color ligeramente distinto */
+/* Nota: Es redundante tener dos .personal h3 con valores distintos; conviene unificarlos. */
 .personal h3 {
-    color: #4240b1;
+    color: #4240b1; /* Color alternativo — elegir uno y eliminar el otro */
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: left;
 }
 
+/* (Duplicación completa de .gallery-row y .gallery-row img) */
+/* Aquí hay duplicidad: mismas reglas que arriba; se debe eliminar este bloque repetido. */
 .gallery-row {
     display: flex;
     gap: 15px;
@@ -266,14 +301,16 @@ main.gallery {
     z-index: 2;
 }
 
+/* Fila destacada con imagen grande y texto debajo */
 .highlight-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Imagen y texto en columna */
     align-items: center;
     margin-bottom: 30px;
     gap: 10px;
 }
 
+/* Imagen destacada con tamaño grande */
 .highlight-row img.highlight {
     width: 300px;
     height: 300px;
@@ -284,53 +321,61 @@ main.gallery {
     cursor: pointer;
 }
 
+/* Hover para la imagen destacada */
 .highlight-row img.highlight:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
+/* TIENDA: layout principal con dos columnas (3fr productos, 1fr sidebar) */
 .tienda-main {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 20px;
+    grid-template-columns: 3fr 1fr; /* Productos anchos, sidebar estrecho */
+    gap: 20px; /* Separación entre columnas */
     padding: 20px;
 }
 
+/* Contenedor de productos: uso de flex en columna para apilar video + grid */
 .tienda-productos {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
+/* Título de sección tienda */
 .tienda-productos h2 {
     color: #4d4bb4;
     margin-bottom: 20px;
 }
 
+/* Contenedor del video (arriba del grid de productos) */
 .tienda-video {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #f9f9f9;
+    text-align: center; /* Centra contenido del video */
+    margin-bottom: 20px; /* Espacio hacia abajo antes del grid */
+    padding: 15px; /* Relleno dentro del bloque del video */
+    background-color: #f9f9f9; /* Fondo neutro para separar visualmente */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Asegura que el video esté por encima si hay superposiciones */
 }
 
+/* Título dentro del bloque del video */
 .tienda-video h3 {
     color: #4d4bb4;
     margin-bottom: 10px;
 }
 
+/* GRID de productos: auto-fit permite adaptarse al ancho del contenedor */
 .productos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tarjetas adaptativas */
     gap: 20px;
     position: relative;
     z-index: 0;
 }
 
+/* Estilos de cada tarjeta de producto */
 .producto {
     background-color: #fff;
     border-radius: 8px;
@@ -339,32 +384,37 @@ main.gallery {
     text-align: center;
 }
 
+/* Imagen dentro de la tarjeta: limitamos altura para uniformidad */
 .producto img {
     max-height: 200px;
     object-fit: cover;
     margin-bottom: 10px;
 }
 
+/* Título del producto */
 .producto h3 {
     font-size: 1.2em;
     margin-bottom: 8px;
     color: #333;
 }
 
+/* Descripción del producto */
 .producto p {
     font-size: 0.9em;
     color: #666;
     margin-bottom: 12px;
 }
 
+/* Precio destacado */
 .precio {
     font-size: 1.1em;
     font-weight: bold;
-    color: #27ae60;
+    color: #27ae60; /* Color verde para asociado a precios/positivo */
     display: block;
     margin-bottom: 15px;
 }
 
+/* Botón comprar: apariencia y transición */
 .btn-comprar {
     display: inline-block;
     padding: 8px 16px;
@@ -375,14 +425,17 @@ main.gallery {
     transition: background-color 0.3s;
 }
 
+/* Hover para el botón comprar */
 .btn-comprar:hover {
     background-color: #2980b9;
 }
 
+/* Sidebar de la tienda: padding para separar del borde */
 .tienda-sidebar {
     padding: 20px;
 }
 
+/* Botón de ver carrito / pagar ahora */
 .btn-ver-carrito {
     display: inline-block;
     padding: 10px 20px;
@@ -395,79 +448,90 @@ main.gallery {
     margin-top: 10px;
 }
 
+/* Hover para el botón pagar */
 .btn-ver-carrito:hover {
     background-color: #e67e22;
 }
 
+/* MEDIA QUERY: comportamiento en pantallas pequeñas */
 @media (max-width: 768px) {
     .tienda-main {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Pasar a una columna (sidebar bajo productos) */
     }
 
     .tienda-sidebar {
-        padding: 10px;
+        padding: 10px; /* Menos padding en pantallas pequeñas */
     }
 }
 
+/* CONTENEDOR DEL FORMULARIO DE CONTACTO: centrado y con estilo de tarjeta */
 .contacto-container {
-            max-width: 700px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+    max-width: 700px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
-        .contacto-container h2 {
-            text-align: center;
-            color: #4d4bb4;
-            margin-bottom: 20px;
-        }
+/* Título del formulario */
+.contacto-container h2 {
+    text-align: center;
+    color: #4d4bb4;
+    margin-bottom: 20px;
+}
 
-        form label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-            color: #333;
-        }
+/* Labels del formulario: bloque, con margen superior */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
 
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-        }
+/* Inputs y textarea con ancho completo y padding */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
 
-        form textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
+/* Textarea con altura mínima y capacidad de redimensionar verticalmente */
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
 
-        .obligatorio {
-            color: red;
-            font-weight: bold;
-        }
+/* Clase para marcar campos obligatorios */
+.obligatorio {
+    color: red;
+    font-weight: bold;
+}
 
-        .btn-enviar {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 20px;
-            background-color: #3498db;
-            color: white;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s;
-            width: 100%;
-        }
+/* Botón de enviar en formulario: estilo principal */
+.btn-enviar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%; /* Botón a ancho completo */
+}
 
-        .btn-enviar:hover {
-            background-color: #2980b9;
-        }
+/* Hover del botón enviar */
+.btn-enviar:hover {
+    background-color: #2980b9;
+}
 
-        footer {
-            margin-top: 40px;
-        }
+/* Separación adicional para el footer; ya definido previamente */
+footer {
+    margin-top: 40px;
+}
