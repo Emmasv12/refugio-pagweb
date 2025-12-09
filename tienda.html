@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Metadatos y estilos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SANVA - Tienda</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- HEADER: igual que en las otras páginas -->
     <header>
         <div class="container header-inner">
             <div class="brand">
@@ -17,7 +19,6 @@
                     <span>♡ Adopta — No Abandones ♡</span>
                 </div>
             </div>
-
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -28,21 +29,25 @@
             </nav>
         </div>
     </header>
+    <!-- MAIN: layout de la tienda con productos y sidebar del carrito -->
     <main class="tienda-main">
         <section class="tienda-productos">
         <h2>Nuestros Productos</h2>
+        <!-- VIDEO: ubicado arriba del grid de productos para mostrar un anuncio -->
         <div class="tienda-video">
             <h3>¡Mira nuestro anuncio!</h3>
             <video width="640" height="360" controls>
                 <source src="Hailuo_Video_haz un video de un anuncio par_449385186979966978.mp4" type="video/mp4">
             </video>
         </div>
+        <!-- GRID DE PRODUCTOS: tarjetas con imagen, nombre, descripción, precio y botón -->
         <div class="productos-grid">
             <div class="producto">
                 <img src="piensogato.jpg" alt="Producto 1">
                 <h3>Comida para gatos</h3>
                 <p>Alimento balanceado para gatos de todas las edades.</p>
                 <span class="precio">$25.00</span>
+                <!-- Botón con data-* para que el script sepa qué añadir al carrito -->
                 <a href="#" class="btn-comprar" data-nombre="Comida para gatos" data-precio="25.00">Comprar</a>
             </div>
             <div class="producto">
@@ -81,15 +86,17 @@
                 <a href="#" class="btn-comprar" data-nombre="Collar para perros" data-precio="10.00">Comprar</a>
             </div>
         </section>
-
+        <!-- SIDEBAR: carrito y horario de atención -->
         <aside class="tienda-sidebar">
             <div class="card">
                 <h3>Carrito de Compras</h3>
+                <!-- Lista vacía que será poblada por JavaScript -->
                 <ul id="carrito-lista"></ul>
-                    <p id="carrito-vacio">Tu carrito está vacío.</p>
+                <!-- Mensaje cuando el carrito está vacío; el script lo oculta al añadir el primer item -->
+                <p id="carrito-vacio">Tu carrito está vacío.</p>
+                <!-- Enlace a la página de contacto (botón Pagar ahora) -->
                 <a href="contacto.html" class="btn-ver-carrito">Pagar ahora</a>
             </div>
-
             <div class="horario">
                 <h4>Horario de atención</h4>
                 <p>
@@ -100,10 +107,10 @@
             </div>
         </aside>
     </main>
-
     <footer>
         <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
     </footer>
+    <!-- SCRIPT: funcionalidad del carrito. Se añade el producto (nombre y precio) al pulsar comprar -->
     <script>
     document.addEventListener("DOMContentLoaded", () => {
         const botonesComprar = document.querySelectorAll(".btn-comprar");
@@ -111,17 +118,16 @@
         const carritoVacio = document.getElementById("carrito-vacio");
         botonesComprar.forEach(boton => {
             boton.addEventListener("click", (e) => {
-                e.preventDefault();
-                const nombre = boton.dataset.nombre;
-                const precio = boton.dataset.precio;
-                const item = document.createElement("li");
-                item.textContent = `${nombre} - $${precio}`;
-                carritoLista.appendChild(item);
-                carritoVacio.style.display = "none";
+                e.preventDefault(); // Evita que el enlace recargue la página
+                const nombre = boton.dataset.nombre; // Lectura de data-nombre
+                const precio = boton.dataset.precio; // Lectura de data-precio
+                const item = document.createElement("li"); // Crear elemento de lista
+                item.textContent = `${nombre} - $${precio}`; // Texto visible en el carrito
+                carritoLista.appendChild(item); // Añadir al DOM del carrito
+                carritoVacio.style.display = "none"; // Ocultar el mensaje de "vacío"
             });
         });
-
     });
-</script>
+    </script>
 </body>
 </html>
