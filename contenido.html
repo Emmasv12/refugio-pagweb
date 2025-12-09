@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="es">
 <head>
+    <!-- Metadatos y enlace a estilos compartidos -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refugio Patitas y Colitas — Nuestros Animales</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- HEADER: reutiliza la cabecera común con navegación -->
     <header>
         <div class="container header-inner">
             <div class="brand">
@@ -17,7 +19,6 @@
                     <span>♡ Adopta — No Abandones ♡</span>
                 </div>
             </div>
-
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -28,12 +29,12 @@
             </nav>
         </div>
     </header>
-
+    <!-- MAIN: área principal donde mostramos columnas de animales -->
     <main class="main-grid">
         <section class="personal">
             <h2>Nuestros Animales en Adopción</h2>
             <p>Estos son algunos de los perros y gatos que están buscando un hogar lleno de amor:</p>
-
+            <!-- CONTAINER DE COLUMNAS: se pretende tener columna para perros y columna para gatos -->
             <div class="animal-columns">
                 <div class="column">
                     <h3>Perros</h3>
@@ -49,10 +50,12 @@
                         <img src="perro 9.jpg" alt="Perro 9">
                         <img src="perro 10.jpg" alt="Perro 10">
                     </div>
+                    <!-- Fila destacada para un perro en particular -->
                     <div class="highlight-row">
                         <img src="perro 4.jpg" alt="Perro Destacado" class="highlight">
                         <p>Perro rescatado más reciente</p>
                     </div>
+                    <!-- Empieza columna de gatos (dentro de la misma estructura de columnas) -->
                     <div class="column">
                         <h3>Gatos</h3>
                         <div class="gallery-row">
@@ -68,12 +71,14 @@
                             <img src="gato 10.jpg" alt="Gato 10">
                         </div>
                     </div>
+                    <!-- Gato destacado -->
                     <div class="highlight-row">
                         <img src="gato 9.jpg" alt="Gato Destacado" class="highlight">
                         <p>Gato rescatado más reciente</p>
                     </div>
                 </div>
             </div>
+            <!-- Horario: información repetida que también aparece en el aside en index; aquí queda bien para esta página -->
             <div class="horario">
                 <h4>Horario de visitas</h4>
                 <p>
@@ -82,9 +87,8 @@
                 Domingo: con cita previa
                 </p>
             </div>
-        </aside>
+        </aside> <!-- <-- NOTA: este cierre parece erróneo: no hay <aside> abierto en este archivo; arreglar en producción -->
     </main>
-
   <footer>
     <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
   </footer>
