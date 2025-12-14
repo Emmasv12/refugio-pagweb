@@ -2,21 +2,16 @@
 <!-- Indica que el documento usa HTML5 -->
 <html lang="es">
 <!-- Define el idioma del documento como español -->
-
 <head>
     <!-- Codificación de caracteres para permitir acentos y símbolos -->
     <meta charset="utf-8">
-
     <!-- Hace que la web sea responsive en móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Título que aparece en la pestaña del navegador -->
     <title>Refugio Patitas y Colitas — Nuestros Animales</title>
-
     <!-- Enlace al archivo CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <!-- ================= HEADER ================= -->
     <!-- Cabecera principal con logo y navegación -->
@@ -26,14 +21,12 @@
             <div class="brand">
                 <div class="banner"></div>
                 <div class="logo"></div>
-
                 <!-- Texto del nombre del refugio -->
                 <div class="brand-text">
                     <strong>SANVA - Refugio de Patitas y Colitas 𓃠</strong>
                     <span>♡ Adopta — No Abandones ♡</span>
                 </div>
             </div>
-
             <!-- Menú de navegación -->
             <nav>
                 <ul>
@@ -45,27 +38,21 @@
             </nav>
         </div>
     </header>
-
     <!-- ================= CONTENIDO PRINCIPAL ================= -->
     <main class="main-grid">
-
         <!-- Sección principal de animales -->
         <section class="personal">
             <!-- Título principal -->
             <h2>Nuestros Animales en Adopción</h2>
-
             <!-- Texto descriptivo -->
             <p>
                 Estos son algunos de los perros y gatos que están buscando un hogar lleno de amor:
             </p>
-
             <!-- Contenedor de columnas (perros y gatos) -->
             <div class="animal-columns">
-
                 <!-- ========== COLUMNA PERROS ========== -->
                 <div class="column">
                     <h3>Perros</h3>
-
                     <!-- Galería de imágenes de perros -->
                     <div class="gallery-row">
                         <img src="perro 1.jpg" alt="Perro 1">
@@ -79,7 +66,6 @@
                         <img src="perro 9.jpg" alt="Perro 9">
                         <img src="perro 10.jpg" alt="Perro 10">
                     </div>
-
                     <!-- Perro destacado -->
                     <div class="highlight-row">
                         <!-- Imagen clickeable -->
@@ -92,7 +78,6 @@
                         <p class="info-click">
                             Haz clic en la imagen para ver más información
                         </p>
-
                         <!-- Tabla oculta con información del perro -->
                         <table class="tabla-info" id="tablaPerro">
                             <tr>
@@ -114,10 +99,8 @@
                         </table>
                     </div>
                 </div>
-
                 <div class="column">
                     <h3>Gatos</h3>
-
                     <!-- Galería de imágenes de gatos -->
                     <div class="gallery-row">
                         <img src="gato1.jpg" alt="Gato 1">
@@ -131,7 +114,6 @@
                         <img src="gato 9.jpg" alt="Gato 9">
                         <img src="gato 10.jpg" alt="Gato 10">
                     </div>
-
                     <!-- Gato destacado -->
                     <div class="highlight-row">
                         <img src="gato 9.jpg"
@@ -142,7 +124,6 @@
                         <p class="info-click">
                             Haz clic en la imagen para ver más información
                         </p>
-
                         <!-- Tabla oculta con información del gato -->
                         <table class="tabla-info" id="tablaGato">
                             <tr>
@@ -173,25 +154,18 @@
     <script>
     // Espera a que todo el HTML esté cargado antes de ejecutar el script
     document.addEventListener("DOMContentLoaded", () => {
-
         // Seleccionamos la imagen del perro destacado
         const perro = document.getElementById("perroDestacado");
-
         // Seleccionamos la tabla del perro
         const tablaPerro = document.getElementById("tablaPerro");
-
         // Seleccionamos la imagen del gato destacado
         const gato = document.getElementById("gatoDestacado");
-
         // Seleccionamos la tabla del gato
         const tablaGato = document.getElementById("tablaGato");
-
         // Evento al hacer clic en el perro
         perro.addEventListener("click", () => {
-
             // Ocultamos la tabla del gato (para que solo una esté visible)
             tablaGato.style.display = "none";
-
             // Alternamos la visibilidad de la tabla del perro
             tablaPerro.style.display =
                 tablaPerro.style.display === "table" ? "none" : "table";
@@ -207,6 +181,5 @@
 
     });
     </script>
-
 </body>
 </html>

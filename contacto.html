@@ -28,7 +28,6 @@
             </nav>
         </div>
     </header>
-
     <!-- CONTENEDOR DEL FORMULARIO -->
     <main>
         <div class="contacto-container">
@@ -36,20 +35,13 @@
             <form action="#" method="post">
                 <!-- Nombre (input de texto) -->
                 <label for="nombre">Nombre <span class="obligatorio">*</span></label>
-                <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]{2,50}" 
-                       title="Solo letras y espacios, entre 2 y 50 caracteres">
-
+                <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]{2,50}" title="Solo letras y espacios, entre 2 y 50 caracteres">
                 <!-- Correo (input email) -->
                 <label for="email">Correo Electrónico <span class="obligatorio">*</span></label>
-                <input type="email" id="email" name="email" required
-                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-                       title="Introduce un correo válido">
-
+                <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  title="Introduce un correo válido">
                 <!-- Teléfono (input number) -->
                 <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono"
-                       pattern="[0-9]{9}" title="Introduce un teléfono de 9 dígitos">
-
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" title="Introduce un teléfono de 9 dígitos">
                 <!-- Asunto (select) -->
                 <label for="asunto">Asunto</label>
                 <select id="asunto" name="asunto">
@@ -58,7 +50,6 @@
                     <option value="voluntariado">Voluntariado</option>
                     <option value="otros">Otros</option>
                 </select>
-
                 <!-- Mensaje (textarea) -->
                 <label for="mensaje">Mensaje <span class="obligatorio">*</span></label>
                 <textarea id="mensaje" name="mensaje" required></textarea>
@@ -68,7 +59,6 @@
             </form>
         </div>
     </main>
-
     <!-- FOOTER -->
     <footer>
         <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
