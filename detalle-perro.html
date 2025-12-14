@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos y estilos -->
+    <meta charset="UTF-8"> <!-- Codificación UTF-8 para caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+    <title>Detalle Perro - Rocky</title>
+    <link rel="stylesheet" href="style.css"> <!-- Enlaza estilos comunes -->
+</head>
+<body>
+    <!-- HEADER común a todas las páginas -->
+    <header>
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="banner"></div>
+                <div class="logo"></div>
+                <div class="brand-text">
+                    <strong>SANVA - Refugio de Patitas y Colitas 𓃠</strong>
+                    <span>♡ Adopta — No Abandones ♡</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="contenido.html">Nuestros animales</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO DETALLE -->
+    <main class="detalle-animal">
+        <div class="container">
+            <h2>Rocky - Perro Destacado</h2>
+            
+            <!-- Imagen principal -->
+            <img src="perro 4.jpg" alt="Rocky" style="width:300px; border-radius:12px;">
+
+            <!-- Información detallada en tabla -->
+            <table class="tabla-info">
+                <thead>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Rocky</td>
+                    </tr>
+                    <tr>
+                        <td>Edad</td>
+                        <td>3 años</td>
+                    </tr>
+                    <tr>
+                        <td>Sexo</td>
+                        <td>Macho</td>
+                    </tr>
+                    <tr>
+                        <td>Personalidad</td>
+                        <td>Juguetón, cariñoso y protector</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Video demostrativo -->
+            <div style="margin-top:20px;">
+                <h3>Video de Rocky jugando</h3>
+                <video width="480" controls>
+                    <source src="rocky_video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Enlace externo relevante -->
+            <p style="margin-top:15px;">
+                Más información sobre razas similares: 
+                <a href="https://www.akc.org/dog-breeds/" target="_blank">American Kennel Club</a>
+            </p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
+    </footer>
+</body>
+</html>
