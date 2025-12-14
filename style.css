@@ -368,204 +368,216 @@ main.gallery {
     z-index: 1; /* Asegura que el video esté por encima si hay superposiciones */
 }
 
-/* Título dentro del bloque del video */
-.tienda-video h3 {
-    color: #4d4bb4;
-    margin-bottom: 10px;
+/* ===== TÍTULO DEL BLOQUE DE VIDEO ===== */
+.tienda-video h3 {              /* Selecciona el <h3> que está dentro del contenedor .tienda-video */
+    color: #4d4bb4;             /* Define el color del texto (tono morado acorde al diseño) */
+    margin-bottom: 10px;        /* Añade espacio inferior para separarlo del contenido siguiente */
 }
 
-/* GRID de productos: auto-fit permite adaptarse al ancho del contenedor */
-.productos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tarjetas adaptativas */
-    gap: 20px;
-    position: relative;
-    z-index: 0;
+/* ===== GRID DE PRODUCTOS ===== */
+.productos-grid {               /* Contenedor que agrupa todas las tarjetas de productos */
+    display: grid;              /* Activa el sistema de diseño Grid */
+    grid-template-columns:      /* Define las columnas del grid */
+        repeat(auto-fit,         /* Crea tantas columnas como quepan automáticamente */
+        minmax(250px, 1fr));     /* Cada tarjeta mide mínimo 250px y máximo el espacio disponible */
+    gap: 20px;                  /* Espacio entre las tarjetas del grid */
+    position: relative;         /* Permite usar z-index si fuera necesario */
+    z-index: 0;                 /* Nivel base de apilamiento */
 }
 
-/* Estilos de cada tarjeta de producto */
-.producto {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
+/* ===== TARJETA INDIVIDUAL DE PRODUCTO ===== */
+.producto {                     /* Contenedor de cada producto individual */
+    background-color: #fff;     /* Fondo blanco para dar efecto de tarjeta */
+    border-radius: 8px;         /* Bordes redondeados para un diseño más suave */
+    padding: 15px;              /* Espaciado interno del contenido */
+    box-shadow:                 /* Sombra suave para dar sensación de elevación */
+        0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;         /* Centra el texto dentro de la tarjeta */
 }
 
-/* Imagen dentro de la tarjeta: limitamos altura para uniformidad */
-.producto img {
-    max-height: 200px;
-    object-fit: cover;
-    margin-bottom: 10px;
+/* ===== IMAGEN DEL PRODUCTO ===== */
+.producto img {                 /* Imagen dentro de cada tarjeta */
+    max-height: 200px;          /* Limita la altura para que todas las tarjetas sean uniformes */
+    object-fit: cover;          /* Recorta la imagen sin deformarla */
+    margin-bottom: 10px;        /* Espacio entre la imagen y el texto */
 }
 
-/* Título del producto */
-.producto h3 {
-    font-size: 1.2em;
-    margin-bottom: 8px;
-    color: #333;
+/* ===== TÍTULO DEL PRODUCTO ===== */
+.producto h3 {                  /* Nombre del producto */
+    font-size: 1.2em;           /* Tamaño ligeramente mayor que el texto normal */
+    margin-bottom: 8px;         /* Espacio inferior */
+    color: #333;                /* Gris oscuro para buena legibilidad */
 }
 
-/* Descripción del producto */
-.producto p {
-    font-size: 0.9em;
-    color: #666;
-    margin-bottom: 12px;
+/* ===== DESCRIPCIÓN DEL PRODUCTO ===== */
+.producto p {                   /* Texto descriptivo del producto */
+    font-size: 0.9em;           /* Tamaño un poco más pequeño que el título */
+    color: #666;                /* Gris claro para diferenciar del título */
+    margin-bottom: 12px;        /* Espacio inferior antes del precio */
 }
 
-/* Precio destacado */
-.precio {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #27ae60; /* Color verde para asociado a precios/positivo */
-    display: block;
-    margin-bottom: 15px;
+/* ===== PRECIO DEL PRODUCTO ===== */
+.precio {                       /* Elemento que muestra el precio */
+    font-size: 1.1em;           /* Tamaño destacado */
+    font-weight: bold;          /* Negrita para resaltar */
+    color: #27ae60;             /* Verde asociado a precios y elementos positivos */
+    display: block;             /* Hace que ocupe su propia línea */
+    margin-bottom: 15px;        /* Separación del botón comprar */
 }
 
-/* Botón comprar: apariencia y transición */
-.btn-comprar {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #3498db;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+/* ===== BOTÓN COMPRAR ===== */
+.btn-comprar {                  /* Botón para añadir productos al carrito */
+    display: inline-block;      /* Permite padding y tamaño personalizado */
+    padding: 8px 16px;          /* Espaciado interno del botón */
+    background-color: #3498db;  /* Color azul principal */
+    color: #fff;                /* Texto blanco */
+    border-radius: 5px;         /* Bordes redondeados */
+    text-decoration: none;      /* Elimina el subrayado del enlace */
+    transition:                 /* Animación suave al cambiar de estado */
+        background-color 0.3s;
 }
 
-/* Hover para el botón comprar */
-.btn-comprar:hover {
-    background-color: #2980b9;
+/* ===== EFECTO HOVER BOTÓN COMPRAR ===== */
+.btn-comprar:hover {            /* Cuando el usuario pasa el ratón por encima */
+    background-color: #2980b9;  /* Azul más oscuro para feedback visual */
 }
 
-/* Sidebar de la tienda: padding para separar del borde */
-.tienda-sidebar {
-    padding: 20px;
+/* ===== SIDEBAR DE LA TIENDA ===== */
+.tienda-sidebar {               /* Contenedor lateral del carrito */
+    padding: 20px;              /* Espaciado interno para separar del borde */
 }
 
-/* Botón de ver carrito / pagar ahora */
-.btn-ver-carrito {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f39c12;
-    color: white;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    margin-top: 10px;
+/* ===== BOTÓN PAGAR / VER CARRITO ===== */
+.btn-ver-carrito {              /* Botón que lleva a contacto.html */
+    display: inline-block;      /* Permite padding y tamaño */
+    padding: 10px 20px;         /* Tamaño cómodo para hacer clic */
+    background-color: #f39c12;  /* Color naranja llamativo */
+    color: white;               /* Texto blanco */
+    border-radius: 8px;         /* Bordes redondeados */
+    font-weight: bold;          /* Texto destacado */
+    text-decoration: none;      /* Quita subrayado */
+    transition:                 /* Animación al hacer hover */
+        background-color 0.3s;
+    margin-top: 10px;           /* Separación respecto al contenido superior */
 }
 
-/* Hover para el botón pagar */
+/* ===== EFECTO HOVER BOTÓN PAGAR ===== */
 .btn-ver-carrito:hover {
-    background-color: #e67e22;
+    background-color: #e67e22;  /* Naranja más oscuro al pasar el ratón */
 }
 
-/* MEDIA QUERY: comportamiento en pantallas pequeñas */
-@media (max-width: 768px) {
+/* ===== MEDIA QUERY PARA PANTALLAS PEQUEÑAS ===== */
+@media (max-width: 768px) {     /* Se aplica solo en móviles y tablets */
+
     .tienda-main {
-        grid-template-columns: 1fr; /* Pasar a una columna (sidebar bajo productos) */
+        grid-template-columns:  /* Cambia el layout de la tienda */
+            1fr;                /* Una sola columna (productos arriba, sidebar abajo) */
     }
 
     .tienda-sidebar {
-        padding: 10px; /* Menos padding en pantallas pequeñas */
+        padding: 10px;          /* Reduce el padding para ahorrar espacio */
     }
 }
 
-/* CONTENEDOR DEL FORMULARIO DE CONTACTO: centrado y con estilo de tarjeta */
-.contacto-container {
-    max-width: 700px;
-    margin: 40px auto;
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+/* ===== CONTENEDOR DEL FORMULARIO DE CONTACTO ===== */
+.contacto-container {           /* Caja principal del formulario */
+    max-width: 700px;           /* Ancho máximo para buena lectura */
+    margin: 40px auto;          /* Centra horizontalmente y añade margen vertical */
+    background: #ffffff;        /* Fondo blanco tipo tarjeta */
+    padding: 25px;              /* Espaciado interno */
+    border-radius: 12px;        /* Bordes redondeados */
+    box-shadow:                 /* Sombra para efecto flotante */
+        0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Título del formulario */
+/* ===== TÍTULO DEL FORMULARIO ===== */
 .contacto-container h2 {
-    text-align: center;
-    color: #4d4bb4;
-    margin-bottom: 20px;
+    text-align: center;         /* Centra el texto */
+    color: #4d4bb4;             /* Color corporativo */
+    margin-bottom: 20px;        /* Espacio inferior */
 }
 
-/* Labels del formulario: bloque, con margen superior */
+/* ===== ETIQUETAS DEL FORMULARIO ===== */
 form label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #333;
+    display: block;             /* Cada label ocupa su propia línea */
+    margin-top: 15px;           /* Separación entre campos */
+    font-weight: bold;          /* Texto en negrita */
+    color: #333;                /* Gris oscuro */
 }
 
-/* Inputs y textarea con ancho completo y padding */
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
+/* ===== CAMPOS DE TEXTO ===== */
+form input,
+form textarea {                 /* Aplica estilos a inputs y textarea */
+    width: 100%;                /* Ocupan todo el ancho del formulario */
+    padding: 10px;              /* Espaciado interno */
+    margin-top: 5px;            /* Separación respecto al label */
+    border-radius: 6px;         /* Bordes suaves */
+    border: 1px solid #ccc;     /* Borde gris claro */
+    font-size: 1rem;            /* Tamaño de texto estándar */
 }
 
-/* Textarea con altura mínima y capacidad de redimensionar verticalmente */
+/* ===== TEXTAREA ===== */
 form textarea {
-    min-height: 120px;
-    resize: vertical;
+    min-height: 120px;          /* Altura mínima */
+    resize: vertical;           /* Permite cambiar altura, no anchura */
 }
 
-/* Clase para marcar campos obligatorios */
+/* ===== CAMPOS OBLIGATORIOS ===== */
 .obligatorio {
-    color: red;
-    font-weight: bold;
+    color: red;                 /* Color rojo para llamar la atención */
+    font-weight: bold;          /* Texto destacado */
 }
 
-/* Botón de enviar en formulario: estilo principal */
+/* ===== BOTÓN ENVIAR ===== */
 .btn-enviar {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 20px;
-    background-color: #3498db;
-    color: white;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-    width: 100%; /* Botón a ancho completo */
+    display: inline-block;      /* Permite personalizar tamaño */
+    margin-top: 20px;           /* Separación superior */
+    padding: 12px 20px;         /* Tamaño del botón */
+    background-color: #3498db;  /* Azul principal */
+    color: white;               /* Texto blanco */
+    font-size: 1.2rem;          /* Texto grande */
+    border: none;               /* Elimina borde por defecto */
+    border-radius: 8px;         /* Bordes redondeados */
+    cursor: pointer;            /* Cursor tipo botón */
+    transition: background 0.3s;/* Animación suave */
+    width: 100%;                /* Botón a ancho completo */
 }
 
-/* Hover del botón enviar */
+/* ===== HOVER BOTÓN ENVIAR ===== */
 .btn-enviar:hover {
-    background-color: #2980b9;
+    background-color: #2980b9;  /* Azul más oscuro al pasar el ratón */
 }
 
-/* Separación adicional para el footer; ya definido previamente */
+/* ===== FOOTER ===== */
 footer {
-    margin-top: 40px;
+    margin-top: 40px;           /* Separación superior del contenido */
 }
 
-/* Tabla de información de animales rescatados */
+/* ===== TABLA DE INFORMACIÓN DE ANIMALES ===== */
 .tabla-info {
-    display: none; /* Oculta la tabla al inicio */
-    margin-top: 15px;
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 400px;
-    background-color: #ffffff;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    overflow: hidden;
+    display: none;              /* Oculta la tabla al cargar la página */
+    margin-top: 15px;           /* Espacio superior */
+    border-collapse: collapse;  /* Une los bordes de las celdas */
+    width: 100%;                /* Ocupa todo el ancho disponible */
+    max-width: 400px;           /* Limita el ancho máximo */
+    background-color: #ffffff;  /* Fondo blanco */
+    box-shadow:                 /* Sombra ligera */
+        0 3px 10px rgba(0,0,0,0.15);
+    border-radius: 8px;         /* Bordes redondeados */
+    overflow: hidden;           /* Evita que el contenido sobresalga */
 }
 
+/* ===== CELDAS DE LA TABLA ===== */
 .tabla-info th,
 .tabla-info td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+    padding: 10px;              /* Espaciado interno */
+    border-bottom: 1px solid #ddd; /* Línea divisoria */
+    text-align: left;           /* Texto alineado a la izquierda */
 }
 
+/* ===== CABECERA DE LA TABLA ===== */
 .tabla-info th {
-    background-color: #4d4bb4;
-    color: white;
-    width: 40%;
+    background-color: #4d4bb4;  /* Fondo morado */
+    color: white;               /* Texto blanco */
+    width: 40%;                 /* Ancho fijo para la columna de títulos */
 }
