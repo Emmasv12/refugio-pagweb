@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Metadatos y estilos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SANVA - Contacto</title>
+    <title>Contacto - SANVA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER: mismo header reutilizable -->
+    <!-- HEADER común -->
     <header>
         <div class="container header-inner">
             <div class="brand">
@@ -24,46 +23,53 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="contenido.html">Nuestros animales</a></li>
                     <li><a href="tienda.html">Tienda</a></li>
-                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <!-- MAIN: formulario de contacto -->
+
+    <!-- CONTENEDOR DEL FORMULARIO -->
     <main>
         <div class="contacto-container">
             <h2>Formulario de Contacto</h2>
-            <!-- FORM: aquí recogemos datos del usuario. En este ejemplo action="#" (no se envía a servidor) -->
-            <form action="#" method="POST">
-                <!-- Nombre (obligatorio) -->
-                <label>Nombre <span class="obligatorio">*</span></label>
-                <input type="text" name="nombre" required>
-                <!-- Apellido (obligatorio) -->
-                <label>Apellido <span class="obligatorio">*</span></label>
-                <input type="text" name="apellido" required>
-                <!-- Fecha de nacimiento (obligatorio) -->
-                <label>Fecha de nacimiento <span class="obligatorio">*</span></label>
-                <input type="date" name="fecha_nacimiento" required>
-                <!-- Domicilio (opcional) -->
-                <label>Domicilio (opcional)</label>
-                <input type="text" name="domicilio">
-                <!-- Correo (obligatorio): se usará para enviar ticket -->
-                <label>Correo electrónico para recibir el ticket <span class="obligatorio">*</span></label>
-                <input type="email" name="correo" required>
-                <!-- Teléfono (obligatorio) -->
-                <label>Número de teléfono <span class="obligatorio">*</span></label>
-                <input type="tel" name="telefono" required>
-                <!-- Cuenta bancaria (opcional) -->
-                <label>Número de cuenta bancaria (opcional)</label>
-                <input type="text" name="cuenta_banco">
-                <!-- Comentarios (opcional) -->
-                <label>Comentarios adicionales (opcional)</label>
-                <textarea name="comentarios"></textarea>
+            <form action="#" method="post">
+                <!-- Nombre (input de texto) -->
+                <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+                <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]{2,50}" 
+                       title="Solo letras y espacios, entre 2 y 50 caracteres">
+
+                <!-- Correo (input email) -->
+                <label for="email">Correo Electrónico <span class="obligatorio">*</span></label>
+                <input type="email" id="email" name="email" required
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                       title="Introduce un correo válido">
+
+                <!-- Teléfono (input number) -->
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono"
+                       pattern="[0-9]{9}" title="Introduce un teléfono de 9 dígitos">
+
+                <!-- Asunto (select) -->
+                <label for="asunto">Asunto</label>
+                <select id="asunto" name="asunto">
+                    <option value="adopcion">Adopción</option>
+                    <option value="donacion">Donación</option>
+                    <option value="voluntariado">Voluntariado</option>
+                    <option value="otros">Otros</option>
+                </select>
+
+                <!-- Mensaje (textarea) -->
+                <label for="mensaje">Mensaje <span class="obligatorio">*</span></label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
                 <!-- Botón enviar -->
-                <button type="submit" class="btn-enviar">Enviar formulario</button>
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
             </form>
         </div>
     </main>
+
+    <!-- FOOTER -->
     <footer>
         <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
     </footer>
