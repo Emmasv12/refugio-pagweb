@@ -543,3 +543,29 @@ form textarea {
 footer {
     margin-top: 40px;
 }
+
+/* Tabla de información de animales rescatados */
+.tabla-info {
+    display: none; /* Oculta la tabla al inicio */
+    margin-top: 15px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-info th,
+.tabla-info td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabla-info th {
+    background-color: #4d4bb4;
+    color: white;
+    width: 40%;
+}

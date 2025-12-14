@@ -125,8 +125,27 @@
             </div>
         </aside> <!-- <-- NOTA: este cierre parece erróneo: no hay <aside> abierto en este archivo; arreglar en producción -->
     </main>
-  <footer>
-    <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
-  </footer>
+    <footer>
+        <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const perro = document.getElementById("perroDestacado");
+            const tablaPerro = document.getElementById("tablaPerro");
+
+            const gato = document.getElementById("gatoDestacado");
+            const tablaGato = document.getElementById("tablaGato");
+
+            perro.addEventListener("click", () => {
+                tablaPerro.style.display =
+                    tablaPerro.style.display === "table" ? "none" : "table";
+            });
+
+            gato.addEventListener("click", () => {
+                tablaGato.style.display =
+                    tablaGato.style.display === "table" ? "none" : "table";
+            });
+         });
+    </script>
 </body>
 </html>
