@@ -1,24 +1,40 @@
 <!doctype html>
+<!-- Indica que el documento usa HTML5 -->
 <html lang="es">
+<!-- Define el idioma del documento como español -->
+
 <head>
-    <!-- Metadatos y enlace a estilos compartidos -->
+    <!-- Codificación de caracteres para permitir acentos y símbolos -->
     <meta charset="utf-8">
+
+    <!-- Hace que la web sea responsive en móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña del navegador -->
     <title>Refugio Patitas y Colitas — Nuestros Animales</title>
+
+    <!-- Enlace al archivo CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- HEADER: reutiliza la cabecera común con navegación -->
+    <!-- ================= HEADER ================= -->
+    <!-- Cabecera principal con logo y navegación -->
     <header>
         <div class="container header-inner">
+            <!-- Bloque de marca -->
             <div class="brand">
                 <div class="banner"></div>
                 <div class="logo"></div>
+
+                <!-- Texto del nombre del refugio -->
                 <div class="brand-text">
                     <strong>SANVA - Refugio de Patitas y Colitas 𓃠</strong>
                     <span>♡ Adopta — No Abandones ♡</span>
                 </div>
             </div>
+
+            <!-- Menú de navegación -->
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -29,15 +45,28 @@
             </nav>
         </div>
     </header>
-    <!-- MAIN: área principal donde mostramos columnas de animales -->
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
     <main class="main-grid">
+
+        <!-- Sección principal de animales -->
         <section class="personal">
+            <!-- Título principal -->
             <h2>Nuestros Animales en Adopción</h2>
-            <p>Estos son algunos de los perros y gatos que están buscando un hogar lleno de amor:</p>
-            <!-- CONTAINER DE COLUMNAS: se pretende tener columna para perros y columna para gatos -->
+
+            <!-- Texto descriptivo -->
+            <p>
+                Estos son algunos de los perros y gatos que están buscando un hogar lleno de amor:
+            </p>
+
+            <!-- Contenedor de columnas (perros y gatos) -->
             <div class="animal-columns">
+
+                <!-- ========== COLUMNA PERROS ========== -->
                 <div class="column">
                     <h3>Perros</h3>
+
+                    <!-- Galería de imágenes de perros -->
                     <div class="gallery-row">
                         <img src="perro 1.jpg" alt="Perro 1">
                         <img src="perro 2.jpg" alt="Perro 2">
@@ -50,10 +79,21 @@
                         <img src="perro 9.jpg" alt="Perro 9">
                         <img src="perro 10.jpg" alt="Perro 10">
                     </div>
-                    <!-- Fila destacada para un perro en particular -->
+
+                    <!-- Perro destacado -->
                     <div class="highlight-row">
-                        <img src="perro 4.jpg" alt="Perro Destacado" class="highlight">
-                        <p>Perro rescatado más reciente</p>
+                        <!-- Imagen clickeable -->
+                        <img src="perro 4.jpg"
+                             alt="Perro Destacado"
+                             class="highlight clickable"
+                             id="perroDestacado">
+
+                        <!-- Texto que indica que se puede hacer clic -->
+                        <p class="info-click">
+                            Haz clic en la imagen para ver más información
+                        </p>
+
+                        <!-- Tabla oculta con información del perro -->
                         <table class="tabla-info" id="tablaPerro">
                             <tr>
                                 <th>Nombre</th>
@@ -73,26 +113,37 @@
                             </tr>
                         </table>
                     </div>
-                    <!-- Empieza columna de gatos (dentro de la misma estructura de columnas) -->
-                    <div class="column">
-                        <h3>Gatos</h3>
-                        <div class="gallery-row">
-                            <img src="gato1.jpg" alt="Gato 1">
-                            <img src="gato 2.jpg" alt="Gato 2">
-                            <img src="gato 3.jpg" alt="Gato 3">
-                            <img src="gato 4.jpg" alt="Gato 4">
-                            <img src="gato 5.jpg" alt="Gato 5">
-                            <img src="gato 6.jpg" alt="Gato 6">
-                            <img src="gato 7.jpg" alt="Gato 7">
-                            <img src="gato 8.jpg" alt="Gato 8">
-                            <img src="gato 9.jpg" alt="Gato 9">
-                            <img src="gato 10.jpg" alt="Gato 10">
-                        </div>
+                </div>
+
+                <div class="column">
+                    <h3>Gatos</h3>
+
+                    <!-- Galería de imágenes de gatos -->
+                    <div class="gallery-row">
+                        <img src="gato1.jpg" alt="Gato 1">
+                        <img src="gato 2.jpg" alt="Gato 2">
+                        <img src="gato 3.jpg" alt="Gato 3">
+                        <img src="gato 4.jpg" alt="Gato 4">
+                        <img src="gato 5.jpg" alt="Gato 5">
+                        <img src="gato 6.jpg" alt="Gato 6">
+                        <img src="gato 7.jpg" alt="Gato 7">
+                        <img src="gato 8.jpg" alt="Gato 8">
+                        <img src="gato 9.jpg" alt="Gato 9">
+                        <img src="gato 10.jpg" alt="Gato 10">
                     </div>
+
                     <!-- Gato destacado -->
                     <div class="highlight-row">
-                        <img src="gato 9.jpg" alt="Gato Destacado" class="highlight">
-                        <p>Gato rescatado más reciente</p>
+                        <img src="gato 9.jpg"
+                             alt="Gato Destacado"
+                             class="highlight clickable"
+                             id="gatoDestacado">
+
+                        <p class="info-click">
+                            Haz clic en la imagen para ver más información
+                        </p>
+
+                        <!-- Tabla oculta con información del gato -->
                         <table class="tabla-info" id="tablaGato">
                             <tr>
                                 <th>Nombre</th>
@@ -114,38 +165,51 @@
                     </div>
                 </div>
             </div>
-            <!-- Horario: información repetida que también aparece en el aside en index; aquí queda bien para esta página -->
-            <div class="horario">
-                <h4>Horario de visitas</h4>
-                <p>
-                Lun - Vie: 10:00 - 18:00<br>
-                Sáb: 10:00 - 14:00<br>
-                Domingo: con cita previa
-                </p>
-            </div>
-        </aside> <!-- <-- NOTA: este cierre parece erróneo: no hay <aside> abierto en este archivo; arreglar en producción -->
+        </section>
     </main>
     <footer>
         <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const perro = document.getElementById("perroDestacado");
-            const tablaPerro = document.getElementById("tablaPerro");
+    // Espera a que todo el HTML esté cargado antes de ejecutar el script
+    document.addEventListener("DOMContentLoaded", () => {
 
-            const gato = document.getElementById("gatoDestacado");
-            const tablaGato = document.getElementById("tablaGato");
+        // Seleccionamos la imagen del perro destacado
+        const perro = document.getElementById("perroDestacado");
 
-            perro.addEventListener("click", () => {
-                tablaPerro.style.display =
-                    tablaPerro.style.display === "table" ? "none" : "table";
-            });
+        // Seleccionamos la tabla del perro
+        const tablaPerro = document.getElementById("tablaPerro");
 
-            gato.addEventListener("click", () => {
-                tablaGato.style.display =
-                    tablaGato.style.display === "table" ? "none" : "table";
-            });
-         });
+        // Seleccionamos la imagen del gato destacado
+        const gato = document.getElementById("gatoDestacado");
+
+        // Seleccionamos la tabla del gato
+        const tablaGato = document.getElementById("tablaGato");
+
+        // Evento al hacer clic en el perro
+        perro.addEventListener("click", () => {
+
+            // Ocultamos la tabla del gato (para que solo una esté visible)
+            tablaGato.style.display = "none";
+
+            // Alternamos la visibilidad de la tabla del perro
+            tablaPerro.style.display =
+                tablaPerro.style.display === "table" ? "none" : "table";
+        });
+
+        // Evento al hacer clic en el gato
+        gato.addEventListener("click", () => {
+
+            // Ocultamos la tabla del perro
+            tablaPerro.style.display = "none";
+
+            // Alternamos la visibilidad de la tabla del gato
+            tablaGato.style.display =
+                tablaGato.style.display === "table" ? "none" : "table";
+        });
+
+    });
     </script>
+
 </body>
 </html>
