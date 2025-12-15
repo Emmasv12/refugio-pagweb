@@ -41,7 +41,7 @@
     <!-- ================= CONTENIDO PRINCIPAL ================= -->
     <main class="main-grid">
         <!-- Sección principal de animales -->
-        <section class="personal">
+        < class="personal">
             <!-- Título principal -->
             <h2>Nuestros Animales en Adopción</h2>
             <!-- Texto descriptivo -->
@@ -68,35 +68,34 @@
                     </div>
                     <!-- Perro destacado -->
                     <div class="highlight-row">
-                        <!-- Imagen clickeable -->
-                        <img src="perro 4.jpg"
-                             alt="Perro Destacado"
-                             class="highlight clickable"
-                             id="perroDestacado">
-
-                        <!-- Texto que indica que se puede hacer clic -->
-                        <p class="info-click">
-                            Haz clic en la imagen para ver más información
-                        </p>
-                        <!-- Tabla oculta con información del perro -->
-                        <table class="tabla-info" id="tablaPerro">
-                            <tr>
-                                <th>Nombre</th>
-                                <td>Rocky</td>
-                            </tr>
-                            <tr>
-                                <th>Edad</th>
-                                <td>3 años</td>
-                            </tr>
-                            <tr>
-                                <th>Sexo</th>
-                                <td>Macho</td>
-                            </tr>
-                            <tr>
-                                <th>Personalidad</th>
-                                <td>Juguetón, cariñoso y protector</td>
-                            </tr>
-                        </table>
+                        <details class="detalle-perro">
+                            <summary class="clickable">
+                                <img src="perro 4.jpg"
+                                    alt="Perro Destacado"
+                                    class="highlight">
+                                <p class="info-click">
+                                    Haz clic en la imagen para ver más información
+                                </p>
+                            </summary>
+                            <table class="tabla-info">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <td>Rocky</td>
+                                </tr>
+                                <tr>
+                                    <th>Edad</th>
+                                    <td>2 años</td>
+                                </tr>
+                                <tr>
+                                    <th>Sexo</th>
+                                    <td>Macho</td>
+                                </tr>
+                                <tr>
+                                    <th>Personalidad</th>
+                                    <td>Juguetón, leal y muy protector</td>
+                                </tr>
+                            </table>
+                        </details>
                     </div>
                 </div>
                 <div class="column">
@@ -114,72 +113,43 @@
                         <img src="gato 9.jpg" alt="Gato 9">
                         <img src="gato 10.jpg" alt="Gato 10">
                     </div>
-                    <!-- Gato destacado -->
+                    <!-- Checkbox oculto -->
+                    <input type="checkbox" id="toggleGato" hidden>
+                    <!-- Gato destacado (label = clic) -->
                     <div class="highlight-row">
-                        <img src="gato 9.jpg"
-                             alt="Gato Destacado"
-                             class="highlight clickable"
-                             id="gatoDestacado">
+                        <details class="detalle-gato">
+                            <summary class="clickable">
+                                <img src="gato 9.jpg"
+                                    alt="Gato Destacado"
+                                    class="highlight">
+                                <p class="info-click">
+                                    Haz clic en la imagen para ver más información
+                                </p>
+                            </summary>
 
-                        <p class="info-click">
-                            Haz clic en la imagen para ver más información
-                        </p>
-                        <!-- Tabla oculta con información del gato -->
-                        <table class="tabla-info" id="tablaGato">
-                            <tr>
-                                <th>Nombre</th>
-                                <td>Luna</td>
-                            </tr>
-                            <tr>
-                                <th>Edad</th>
-                                <td>1 año</td>
-                            </tr>
-                            <tr>
-                                <th>Sexo</th>
-                                <td>Hembra</td>
-                            </tr>
-                            <tr>
-                                <th>Personalidad</th>
-                                <td>Tranquila, curiosa y muy mimosa</td>
-                            </tr>
-                        </table>
+                            <table class="tabla-info">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <td>Luna</td>
+                                </tr>
+                                <tr>
+                                    <th>Edad</th>
+                                    <td>1 año</td>
+                                </tr>
+                                <tr>
+                                    <th>Sexo</th>
+                                    <td>Hembra</td>
+                                </tr>
+                                <tr>
+                                    <th>Personalidad</th>
+                                    <td>Tranquila, curiosa y muy mimosa</td>
+                                </tr>
+                            </table>
+                        </details>
                     </div>
                 </div>
             </div>
-        </section>
+        </class>
     </main>
-    <footer>
-        <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
-    </footer>
-    <script>
-    // Espera a que todo el HTML esté cargado antes de ejecutar el script
-    document.addEventListener("DOMContentLoaded", () => {
-        // Seleccionamos la imagen del perro destacado
-        const perro = document.getElementById("perroDestacado");
-        // Seleccionamos la tabla del perro
-        const tablaPerro = document.getElementById("tablaPerro");
-        // Seleccionamos la imagen del gato destacado
-        const gato = document.getElementById("gatoDestacado");
-        // Seleccionamos la tabla del gato
-        const tablaGato = document.getElementById("tablaGato");
-        // Evento al hacer clic en el perro
-        perro.addEventListener("click", () => {
-            // Ocultamos la tabla del gato (para que solo una esté visible)
-            tablaGato.style.display = "none";
-            // Alternamos la visibilidad de la tabla del perro
-            tablaPerro.style.display =
-                tablaPerro.style.display === "table" ? "none" : "table";
-        });
-        // Evento al hacer clic en el gato
-        gato.addEventListener("click", () => {
-            // Ocultamos la tabla del perro
-            tablaPerro.style.display = "none";
-            // Alternamos la visibilidad de la tabla del gato
-            tablaGato.style.display =
-                tablaGato.style.display === "table" ? "none" : "table";
-        });
-
-    });
-    </script>
 </body>
 </html>

@@ -581,3 +581,47 @@ footer {
     color: white;               /* Texto blanco */
     width: 40%;                 /* Ancho fijo para la columna de títulos */
 }
+
+/* Ocultar tabla solo cuando details está cerrado */
+.detalle-gato .tabla-info {
+    display: none;
+}
+
+/* Mostrar tabla cuando details está abierto */
+.detalle-gato[open] .tabla-info {
+    display: table;
+}
+
+/* Estilo del summary */
+.detalle-gato summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+/* Quitar flecha del summary */
+.detalle-gato summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Ocultar tablas cuando están cerradas */
+.detalle-perro .tabla-info,
+.detalle-gato .tabla-info {
+    display: none;
+}
+
+/* Mostrar tablas cuando details está abierto */
+.detalle-perro[open] .tabla-info,
+.detalle-gato[open] .tabla-info {
+    display: table;
+}
+
+/* Summary clickeable */
+details summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+/* Quitar flechita */
+details summary::-webkit-details-marker {
+    display: none;
+}

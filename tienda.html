@@ -89,13 +89,13 @@
         <!-- SIDEBAR: carrito y horario de atención -->
         <aside class="tienda-sidebar">
             <div class="card">
-                <h3>Carrito de Compras</h3>
+                <h3>Información añadida</h3>
                 <!-- Lista vacía que será poblada por JavaScript -->
                 <ul id="carrito-lista"></ul>
                 <!-- Mensaje cuando el carrito está vacío; el script lo oculta al añadir el primer item -->
-                <p id="carrito-vacio">Tu carrito está vacío.</p>
+                <p id="carrito-vacio">Si desea más información, pulse abajo</p>
                 <!-- Enlace a la página de contacto (botón Pagar ahora) -->
-                <a href="contacto.html" class="btn-ver-carrito">Pagar ahora</a>
+                <a href="contacto.html" class="btn-ver-carrito">PULSAR AQUI</a>
             </div>
             <div class="horario">
                 <h4>Horario de atención</h4>
@@ -110,24 +110,5 @@
     <footer>
         <p>Refugio SANVA — No abandones, <b>Adopta</b>.</p>
     </footer>
-    <!-- SCRIPT: funcionalidad del carrito. Se añade el producto (nombre y precio) al pulsar comprar -->
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const botonesComprar = document.querySelectorAll(".btn-comprar");
-        const carritoLista = document.getElementById("carrito-lista");
-        const carritoVacio = document.getElementById("carrito-vacio");
-        botonesComprar.forEach(boton => {
-            boton.addEventListener("click", (e) => {
-                e.preventDefault(); // Evita que el enlace recargue la página
-                const nombre = boton.dataset.nombre; // Lectura de data-nombre
-                const precio = boton.dataset.precio; // Lectura de data-precio
-                const item = document.createElement("li"); // Crear elemento de lista
-                item.textContent = `${nombre} - $${precio}`; // Texto visible en el carrito
-                carritoLista.appendChild(item); // Añadir al DOM del carrito
-                carritoVacio.style.display = "none"; // Ocultar el mensaje de "vacío"
-            });
-        });
-    });
-    </script>
 </body>
 </html>
