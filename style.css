@@ -568,8 +568,7 @@ footer {
 }
 
 /* ===== CELDAS DE LA TABLA ===== */
-.tabla-info th,
-.tabla-info td {
+.tabla-info th, .tabla-info td {
     padding: 10px;              /* Espaciado interno */
     border-bottom: 1px solid #ddd; /* Línea divisoria */
     text-align: left;           /* Texto alineado a la izquierda */
@@ -624,4 +623,14 @@ details summary {
 /* Quitar flechita */
 details summary::-webkit-details-marker {
     display: none;
+}
+
+input:invalid {
+    border: 2px solid red;
+    background-color: rgb(255, 176, 176);
+}
+
+input:valid {
+    border: 2px solid green;
+    background-color: rgb(137, 247, 137);
 }
